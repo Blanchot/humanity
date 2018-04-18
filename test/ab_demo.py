@@ -43,7 +43,7 @@ def main():
 
     # Enable the outputs
     servo.output_enable()
-
+    '''
     # move the servo across its full range in increments of 10
     while True:
         for i in range(0, 250, 10):
@@ -53,7 +53,7 @@ def main():
         for i in range(250, 0, -10):
             servo.move(1, i)
             time.sleep(1)
-
+    '''
 
 if __name__ == "__main__":
     main()
