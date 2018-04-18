@@ -11,6 +11,7 @@ and then move between those positions
 from __future__ import absolute_import, division, print_function, \
                                                     unicode_literals
 import time
+import sys # added because it I get the first import error below
 
 try:
     from ServoPi import Servo
