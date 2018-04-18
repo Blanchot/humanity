@@ -12,6 +12,7 @@ from __future__ import absolute_import, division, print_function, \
                                                     unicode_literals
 import time
 import sys # added because it I get the first import error below
+sys.path.append('usr/local/lib/python3.5/dist-packages/ServoPi')
 
 try:
     from ServoPi import Servo
