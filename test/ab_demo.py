@@ -28,6 +28,14 @@ except ImportError:
             "Failed to import library from parent folder")
 
 
+# My testing mods
+
+servo = Servo(0x40)
+servo.set_low_limit(1.0)
+servo.set_high_limit(2.0)
+servo.output_enable()
+
+'''    
 def main():
     """
     Main program function
@@ -43,7 +51,7 @@ def main():
 
     # Enable the outputs
     servo.output_enable()
-    '''
+    
     # move the servo across its full range in increments of 10
     while True:
         for i in range(0, 250, 10):
@@ -53,7 +61,8 @@ def main():
         for i in range(250, 0, -10):
             servo.move(1, i)
             time.sleep(1)
-    '''
 
 if __name__ == "__main__":
     main()
+
+'''
