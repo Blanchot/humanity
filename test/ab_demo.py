@@ -48,10 +48,11 @@ def main():
     while True:
         for i in range(0, 250, 10):
             servo.move(1, i)
-            time.sleep(0.05)
+            time.sleep(1) #was 0.05
 
         for i in range(250, 0, -10):
             servo.move(1, i)
+            time.sleep(1)
 
 
 if __name__ == "__main__":
