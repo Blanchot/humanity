@@ -28,12 +28,32 @@ servo.output_enable()
 def reset():
   servo.move(6,110)
   servo.move(5,100)
-  servo.move(1,100)
   servo.move(2,110)
+  servo.move(1,100)
   servo.move(10,110)
   servo.move(9,100)
   servo.move(4,120)
   servo.move(3,110)
+
+def up():
+  servo.move(6,0)
+  servo.move(5,250)
+  servo.move(2,0)
+  servo.move(1,250)
+  servo.move(10,0)
+  servo.move(9,250)
+  servo.move(4,0)
+  servo.move(3,250)
+
+def down():
+  servo.move(6,250)
+  servo.move(5,0)
+  servo.move(2,250)
+  servo.move(1,0)
+  servo.move(10,250)
+  servo.move(9,0)
+  servo.move(4,250)
+  servo.move(3,0)
 
 
 '''
