@@ -25,6 +25,17 @@ servo.set_low_limit(0.6) #was 1.0
 servo.set_high_limit(2.4) #was 2.0
 servo.output_enable()
 
+def reset():
+  servo.move(6,110)
+  servo.move(5,100)
+  servo.move(1,100)
+  servo.move(2,110)
+  servo.move(10,110)
+  servo.move(9,100)
+  servo.move(4,120)
+  servo.move(3,110)
+
+
 '''
 Note: all indications of left/right are from my frontal view
 Note: numeric arm ranges are from up to down
