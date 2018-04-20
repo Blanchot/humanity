@@ -32,7 +32,7 @@ semaphore = {
 'P': (1, 0), 'R': (1, 1), 'S': (1, 2), 'T': (1, 3), 'U': (1, 4),
 ' ': (0, 0), 'V': (0, 1), 'W': (0, 2), 'X': (0, 3), 'Y': (0, 4)}
 
-# calibration of the 8 servos (in 250 steps) from lowest position upwards
+#calibration of the 8 servos (in 250 steps) from lowest position upwards
 calib_06 = [0, 63, 120, 188, 250] #fig 1 left arm
 calib_05 = [250, 188, 120, 63, 0] #fig 1 right arm
 calib_02 = [0, 55, 105, 170, 250] #fig 2 left arm
@@ -43,7 +43,7 @@ calib_04 = [0, 52, 115, 188, 250] #fig 4 left arm
 calib_03 = [250, 188, 110, 55, 0] #fig 4 right arm
 
 
-def calibrateServos():
+def center(): #center servos
     servo.move(6, calib_06[2])
     servo.move(5, calib_05[2])
     servo.move(2, calib_02[2])
@@ -54,25 +54,24 @@ def calibrateServos():
     servo.move(3, calib_03[2])
 
 def up():
-  servo.move(6,0)
-  servo.move(5,250)
-  servo.move(2,0)
-  servo.move(1,250)
-  servo.move(10,0)
-  servo.move(9,250)
-  servo.move(4,0)
-  servo.move(3,250)
+  servo.move(6, calib_06[0])
+  servo.move(5, calib_05[0])
+  servo.move(2, calib_02[0])
+  servo.move(1, calib_01[0])
+  servo.move(10, calib_10[0])
+  servo.move(9, calib_09[0])
+  servo.move(4, calib_04[0])
+  servo.move(3, calib_03[0])
 
 def down():
-  servo.move(6,250)
-  servo.move(5,0)
-  servo.move(2,250)
-  servo.move(1,0)
-  servo.move(10,250)
-  servo.move(9,0)
-  servo.move(4,250)
-  servo.move(3,0)
-
+  servo.move(6, calib_06[4])
+  servo.move(5, calib_05[4])
+  servo.move(2, calib_02[4])
+  servo.move(1, calib_01[4])
+  servo.move(10, calib_10[4])
+  servo.move(9, calib_09[4])
+  servo.move(4, calib_04[4])
+  servo.move(3, calib_03[4])
 
 '''
 Note: all indications of left/right are from my frontal view
