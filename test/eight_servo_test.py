@@ -44,14 +44,14 @@ calib_03 = [250, 188, 110, 55, 0] #fig 4 right arm
 
 
 def calibrateServos():
-    servos.move(6, calib_06[2])
-    servos.move(5, calib_05[2])
-    servos.move(2, calib_02[2])
-    servos.move(1, calib_01[2])
-    servos.move(10, calib_10[2])
-    servos.move(9, calib_09[2])
-    servos.move(4, calib_04[2])
-    servos.move(3, calib_03[2])
+    servo.move(6, calib_06[2])
+    servo.move(5, calib_05[2])
+    servo.move(2, calib_02[2])
+    servo.move(1, calib_01[2])
+    servo.move(10, calib_10[2])
+    servo.move(9, calib_09[2])
+    servo.move(4, calib_04[2])
+    servo.move(3, calib_03[2])
 
 def up():
   servo.move(6,0)
