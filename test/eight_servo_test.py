@@ -86,7 +86,7 @@ def test():
     for p in s[1]:
       #print('servo.move(',s[0],',',p,')')
       servo.move(s[0],p)
-      time.sleep(1)
+      time.sleep(0.25)
 
 
 '''
