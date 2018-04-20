@@ -33,25 +33,25 @@ semaphore = {
 ' ': (0, 0), 'V': (0, 1), 'W': (0, 2), 'X': (0, 3), 'Y': (0, 4)}
 
 # calibration of the 8 servos (in 250 steps) from lowest position upwards
-calib_06 = [0, 63, 125, 188, 250]
-calib_05 = [250, 188, 125, 63, 0]
-calib_02 = [0, 63, 125, 188, 250]
-calib_01 = [250, 188, 125, 63, 0]
-calib_10 = [0, 63, 125, 188, 250]
-calib_09 = [250, 188, 125, 63, 0]
-calib_04 = [0, 63, 125, 188, 250]
-calib_03 = [250, 188, 125, 63, 0]
+calib_06 = [0, 63, 120, 188, 250] #fig 1 left arm
+calib_05 = [250, 188, 120, 63, 0] #fig 1 right arm
+calib_02 = [0, 55, 105, 170, 250] #fig 2 left arm
+calib_01 = [250, 188, 120, 63, 0] #fig 2 right arm
+calib_10 = [0, 60, 115, 180, 250] #fig 3 left arm
+calib_09 = [250, 180, 105, 50, 0] #fig 3 right arm
+calib_04 = [0, 52, 115, 188, 250] #fig 4 left arm
+calib_03 = [250, 188, 110, 55, 0] #fig 4 right arm
 
 
-def reset():
-  servo.move(6,110)
-  servo.move(5,100)
-  servo.move(2,110)
-  servo.move(1,100)
-  servo.move(10,110)
-  servo.move(9,100)
-  servo.move(4,120)
-  servo.move(3,110)
+def calibrateServos():
+    servos.move(6, calib_06[2])
+    servos.move(5, calib_05[2])
+    servos.move(2, calib_02[2])
+    servos.move(1, calib_01[2])
+    servos.move(10, calib_10[2])
+    servos.move(9, calib_09[2])
+    servos.move(4, calib_04[2])
+    servos.move(3, calib_03[2])
 
 def up():
   servo.move(6,0)
