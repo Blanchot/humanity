@@ -33,9 +33,9 @@ semaphore = {
 ' ': (0, 0), 'V': (0, 1), 'W': (0, 2), 'X': (0, 3), 'Y': (0, 4)}
 
 #calibration of the 8 servos and their positions (from lowest position upwards)
-calib_06 = [0, 63, 120, 188, 250] #fig 1 left arm
-calib_05 = [250, 188, 120, 63, 0] #fig 1 right arm
-calib_02 = [0, 55, 105, 170, 250] #fig 2 left arm
+calib_06 = [0, 63, 115, 188, 250] #fig 1 left arm
+calib_05 = [250, 188, 113, 63, 0] #fig 1 right arm
+calib_02 = [0, 55, 100, 170, 250] #fig 2 left arm
 calib_01 = [250, 188, 120, 63, 0] #fig 2 right arm
 calib_10 = [0, 60, 115, 180, 250] #fig 3 left arm
 calib_09 = [250, 180, 105, 50, 0] #fig 3 right arm
