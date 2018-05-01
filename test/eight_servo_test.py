@@ -1,4 +1,5 @@
 # eight_servo_test
+#USAGE: sudo python3 -i eight_servo_test.py
 # using ABElectronics Servo Pi pwm controller
 # based on ABElectronics PWM servo controller demo
 
@@ -89,6 +90,10 @@ def test():
       time.sleep(0.4)
   center()
 
+def ring():
+  servo.move(16,0)
+  time.sleep(0.1)
+  servo.move(16,70)
 
 '''
 Note: all indications of left/right are from my frontal view
