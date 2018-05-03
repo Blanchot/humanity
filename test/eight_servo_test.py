@@ -1,5 +1,5 @@
 # eight_servo_test
-#USAGE: sudo python3 -i eight_servo_test.py
+# USAGE: sudo python3 -i eight_servo_test.py
 # using ABElectronics Servo Pi pwm controller
 # based on ABElectronics PWM servo controller demo
 
