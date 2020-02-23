@@ -1,5 +1,5 @@
 # eight_servo_test2.py
-# USAGE: sudo python3 -i eight_servo_test.py
+# USAGE: (sudo) python3 -i eight_servo_test2.py
 # using ABElectronics Servo Pi pwm controller
 # based on ABElectronics PWM servo controller demo
 # 23.02.2020 started adding new code
@@ -53,6 +53,7 @@ servoList = [
 [10,fig3_L], [9, fig3_R], [4, fig4_L], [3, fig4_R]
 ]
 
+
 def center(): #center servos
     servo.move(6, fig1_L[2])
     servo.move(5, fig1_R[2])
@@ -62,6 +63,7 @@ def center(): #center servos
     servo.move(9, fig3_R[2])
     servo.move(4, fig4_L[2])
     servo.move(3, fig4_R[2])
+
 
 def up():
   servo.move(6, fig1_L[0])
@@ -73,6 +75,7 @@ def up():
   servo.move(4, fig4_L[0])
   servo.move(3, fig4_R[0])
 
+
 def down():
   servo.move(6, fig1_L[4])
   servo.move(5, fig1_R[4])
@@ -83,6 +86,7 @@ def down():
   servo.move(4, fig4_L[4])
   servo.move(3, fig4_R[4])
 
+
 def test():
   for s in servoList:
     #print('s[0]: ',s[0])
@@ -91,6 +95,32 @@ def test():
       servo.move(s[0],p)
       time.sleep(0.4)
   center()
+
+
+def display(vier):
+  posList= [] #create an empty list of positions
+  for letter in vier:
+    print(semaphore[letter]) #prints the tuple for each letter
+    posList.extend(semaphore[letter]) #appends each element of the tuple to posList (Oh joy!)
+  print(posList)
+
+
+#INPUT AND TESTING
+def entry():
+  vier= input('Type a 4 letter word...').upper()
+  if len(vier)!=4:
+    print('Incorrect length!')
+  elif vier.isalpha():
+    count=0
+    for letter in vier:
+      if letter in semaphore:
+        count= count+1
+    if count==4:
+      print('Word ok:', vier)
+      display(vier)
+    else:
+      print('Some letters unavailable!')
+
 
 
 '''
