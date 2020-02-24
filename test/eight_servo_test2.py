@@ -36,17 +36,6 @@ semaphore = {
 
 #calibration of the 8 servos and their positions (from lowest position upwards)
 #renaming from calib_## to fig#_L/R to make understanding code easier
-'''
-fig1_L = [0, 63, 115, 188, 250] #fig 1 left arm
-fig1_R = [250, 188, 113, 63, 0] #fig 1 right arm
-fig2_L = [0, 55, 100, 170, 250] #fig 2 left arm
-fig2_R = [250, 188, 120, 63, 0] #fig 2 right arm
-fig3_L = [0, 60, 115, 180, 250] #fig 3 left arm
-fig3_R = [250, 180, 105, 50, 0] #fig 3 right arm
-fig4_L = [0, 52, 115, 188, 250] #fig 4 left arm
-fig4_R = [250, 188, 110, 55, 0] #fig 4 right arm
-'''
-# REVERSED?
 fig1_L = [250, 188, 115, 63, 0] #fig 1 left arm
 fig1_R = [0, 63, 113, 188, 250] #fig 1 right arm
 fig2_L = [250, 170, 100, 55, 0] #fig 2 left arm
@@ -77,7 +66,7 @@ def center(): #center servos
     servo.move(3, fig4_R[2])
 
 
-def up():
+def down():
   servo.move(6, fig1_L[0])
   servo.move(5, fig1_R[0])
   servo.move(2, fig2_L[0])
@@ -88,7 +77,7 @@ def up():
   servo.move(3, fig4_R[0])
 
 
-def down():
+def up():
   servo.move(6, fig1_L[4])
   servo.move(5, fig1_R[4])
   servo.move(2, fig2_L[4])
@@ -112,15 +101,15 @@ def test():
 def display(vier):
   posList= [] #create an empty list of positions
   for letter in vier:
-    print(semaphore[letter]) #prints the tuple for each letter
+    print(semaphore[letter]) #TESTING: prints the tuple for each letter
     posList.extend(semaphore[letter]) #appends each element of the tuple to posList (Oh joy!)
-  print(posList)
+  print(posList) #TESTING: prints the list of positions
   for i in range(0,8):
-    print('Servo #: ', servoList[i][0], 'Pos #: ', servoList[i][1][posList[i]])
+    print('Servo #:', servoList[i][0], 'Pos #:', servoList[i][1][posList[i]])
     servo.move(servoList[i][0], servoList[i][1][posList[i]])
 
 
-#INPUT AND TESTING
+# MANUAL INPUT
 def entry():
   vier= input('Type a 4 letter word...').upper()
   if len(vier)!=4:
@@ -137,11 +126,6 @@ def entry():
       print('Some letters unavailable!')
 
 
-'''
-for i in range(0,8):
-  servo.move(servoList[i][0],servoList[i][1][posList[i]])
-
-'''
 
 '''
 Note: all indications of left/right are from my frontal view
