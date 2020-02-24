@@ -104,7 +104,7 @@ def display(vier):
     posList.extend(semaphore[letter]) #appends each element of the tuple to posList (Oh joy!)
   print(posList)
   for i in range(0,8):
-    print('Servo #: ', servoList[i][0], 'Pos #: ', servoList[i][1][postList[i]])
+    print('Servo #: ', servoList[i][0], 'Pos #: ', servoList[i][1][posList[i]])
 
 
 
