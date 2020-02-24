@@ -103,6 +103,9 @@ def display(vier):
     print(semaphore[letter]) #prints the tuple for each letter
     posList.extend(semaphore[letter]) #appends each element of the tuple to posList (Oh joy!)
   print(posList)
+  for i in range(0,8):
+    print('Servo #: ', servoList[i][0], 'Pos #: ', servoList[i][1][postList[i]])
+
 
 
 #INPUT AND TESTING
@@ -122,6 +125,11 @@ def entry():
       print('Some letters unavailable!')
 
 
+'''
+for i in range(0,8):
+  servo.move(servoList[i][0],servoList[i][1][posList[i]])
+
+'''
 
 '''
 Note: all indications of left/right are from my frontal view
