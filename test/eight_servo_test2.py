@@ -36,6 +36,7 @@ semaphore = {
 
 #calibration of the 8 servos and their positions (from lowest position upwards)
 #renaming from calib_## to fig#_L/R to make understanding code easier
+'''
 fig1_L = [0, 63, 115, 188, 250] #fig 1 left arm
 fig1_R = [250, 188, 113, 63, 0] #fig 1 right arm
 fig2_L = [0, 55, 100, 170, 250] #fig 2 left arm
@@ -44,6 +45,17 @@ fig3_L = [0, 60, 115, 180, 250] #fig 3 left arm
 fig3_R = [250, 180, 105, 50, 0] #fig 3 right arm
 fig4_L = [0, 52, 115, 188, 250] #fig 4 left arm
 fig4_R = [250, 188, 110, 55, 0] #fig 4 right arm
+'''
+# REVERSED?
+fig1_L = [250, 188, 115, 63, 0] #fig 1 left arm
+fig1_R = [0, 63, 113, 188, 250] #fig 1 right arm
+fig2_L = [250, 170, 100, 55, 0] #fig 2 left arm
+fig2_R = [0, 63, 120, 188, 250] #fig 2 right arm
+fig3_L = [250, 180, 115, 60, 0] #fig 3 left arm
+fig3_R = [0, 50, 105, 180, 250] #fig 3 right arm
+fig4_L = [250, 188, 115, 52, 0] #fig 4 left arm
+fig4_R = [0, 55, 110, 188, 250] #fig 4 right arm
+
 
 # lets make a list of lists of the 8 servos... 
 # each list containing the board pin # and the list of calibrated positions
