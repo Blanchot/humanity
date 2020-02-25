@@ -51,8 +51,8 @@ fig4_R = [0, 55, 110, 188, 250] #fig 4 right arm
 # each list containing the board pin # and the list of calibrated positions
 # i.e. servoList = [[pin#, fig1_L], [pin#, fig1_R], etc.]
 servoList = [
-[6, fig1_L], [5, fig1_R], [2, fig2_L], [1, fig2_R],
-[10,fig3_L], [9, fig3_R], [4, fig4_L], [3, fig4_R]
+[1, fig1_L], [2, fig1_R], [3, fig2_L], [4, fig2_R],
+[5,fig3_L], [6, fig3_R], [8, fig4_L], [9, fig4_R]
 ]
 
 
