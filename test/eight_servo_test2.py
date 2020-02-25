@@ -1,8 +1,9 @@
-# eight_servo_test2.py
+# eight_servo_test2.py (for smaller test setup using 'prometheus')
 # USAGE: (sudo) python3 -i eight_servo_test2.py
 # using ABElectronics Servo Pi pwm controller
 # based on ABElectronics PWM servo controller demo
 # 23.02.2020 started adding new code
+# 25.02.2020 moving this code to awater_01.py (to calibrate servos for large work)
  
 from __future__ import absolute_import, division, print_function, \
                                                     unicode_literals
