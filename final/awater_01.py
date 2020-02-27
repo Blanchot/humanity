@@ -37,8 +37,8 @@ semaphore = {
 
 #calibration of the 8 servos and their positions (from lowest position upwards)
 #renaming from calib_## to fig#_L/R to make understanding code easier
-fig1_L = [250, 188, 115, 63, 0] #fig 1 left arm
-fig1_R = [0, 63, 113, 188, 250] #fig 1 right arm
+fig1_L = [250, 188, 115, 63, 0] #fig 1 left arm (servo 1)
+fig1_R = [0, 63, 113, 188, 250] #fig 1 right arm (servo 2)
 fig2_L = [250, 170, 100, 55, 0] #fig 2 left arm
 fig2_R = [0, 63, 120, 188, 250] #fig 2 right arm
 fig3_L = [250, 180, 115, 60, 0] #fig 3 left arm
@@ -50,43 +50,53 @@ fig4_R = [0, 55, 110, 188, 250] #fig 4 right arm
 # lets make a list of lists of the 8 servos... 
 # each list containing the board pin # and the list of calibrated positions
 # i.e. servoList = [[pin#, fig1_L], [pin#, fig1_R], etc.]
+'''
+Fig. 1L board pin: 1
+Fig. 1R board pin: 2
+Fig. 2L board pin: 7
+Fig. 2R board pin: 8
+Fig. 3L board pin: 11
+Fig. 3R board pin: 12
+Fig. 4L board pin: 15
+Fig. 4R board pin: 16
+'''
 servoList = [
-[1, fig1_L], [2, fig1_R], [3, fig2_L], [4, fig2_R],
-[5,fig3_L], [6, fig3_R], [8, fig4_L], [9, fig4_R]
+[1, fig1_L], [2, fig1_R], [7, fig2_L], [8, fig2_R],
+[11,fig3_L], [12, fig3_R], [15, fig4_L], [16, fig4_R]
 ]
 
 
 def center(): #center servos
-    servo.move(6, fig1_L[2])
-    servo.move(5, fig1_R[2])
-    servo.move(2, fig2_L[2])
-    servo.move(1, fig2_R[2])
-    servo.move(10, fig3_L[2])
-    servo.move(9, fig3_R[2])
-    servo.move(4, fig4_L[2])
-    servo.move(3, fig4_R[2])
+    servo.move(1, fig1_L[2])
+    servo.move(2, fig1_R[2])
+    servo.move(7, fig2_L[2])
+    servo.move(8, fig2_R[2])
+    servo.move(11, fig3_L[2])
+    servo.move(12, fig3_R[2])
+    servo.move(15, fig4_L[2])
+    servo.move(16, fig4_R[2])
 
 
 def down():
-  servo.move(6, fig1_L[0])
-  servo.move(5, fig1_R[0])
-  servo.move(2, fig2_L[0])
-  servo.move(1, fig2_R[0])
-  servo.move(10, fig3_L[0])
-  servo.move(9, fig3_R[0])
-  servo.move(4, fig4_L[0])
-  servo.move(3, fig4_R[0])
+  servo.move(1, fig1_L[0])
+  servo.move(2, fig1_R[0])
+  servo.move(7, fig2_L[0])
+  servo.move(8, fig2_R[0])
+  servo.move(11, fig3_L[0])
+  servo.move(12, fig3_R[0])
+  servo.move(15, fig4_L[0])
+  servo.move(16, fig4_R[0])
 
 
 def up():
-  servo.move(6, fig1_L[4])
-  servo.move(5, fig1_R[4])
-  servo.move(2, fig2_L[4])
-  servo.move(1, fig2_R[4])
-  servo.move(10, fig3_L[4])
-  servo.move(9, fig3_R[4])
-  servo.move(4, fig4_L[4])
-  servo.move(3, fig4_R[4])
+  servo.move(1, fig1_L[4])
+  servo.move(2, fig1_R[4])
+  servo.move(7, fig2_L[4])
+  servo.move(8, fig2_R[4])
+  servo.move(11, fig3_L[4])
+  servo.move(12, fig3_R[4])
+  servo.move(15, fig4_L[4])
+  servo.move(16, fig4_R[4])
 
 
 def test():
