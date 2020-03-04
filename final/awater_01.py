@@ -117,6 +117,7 @@ def display(vier):
     posList.extend(semaphore[letter]) #appends each element of the tuple to posList (Oh joy!)
   print(posList) #TESTING: prints the list of positions
   center()
+  time.sleep(2)
   for i in range(0,8):
     print('Servo #:', servoList[i][0], 'Pos #:', servoList[i][1][posList[i]])
     servo.move(servoList[i][0], servoList[i][1][posList[i]])
