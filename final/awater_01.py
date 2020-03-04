@@ -3,7 +3,7 @@
 # using ABElectronics Servo Pi pwm controller
 # based on ABElectronics PWM servo controller demo
 # 25.02.2020 ready to calibrate the servos for the large work
-# 04.03.2020 testing set low and high limits to default
+# 04.03.2020 initial calibration of servos
  
 from __future__ import absolute_import, division, print_function, \
                                                     unicode_literals
@@ -24,9 +24,7 @@ except ImportError:
 
 # SETUP
 servo = Servo(0x40)
-#servo.set_low_limit(1.0)
 servo.set_low_limit(0.6) #was 1.0
-#servo.set_high_limit(2.0)
 servo.set_high_limit(2.4) #was 2.0
 servo.output_enable()
 
@@ -38,15 +36,15 @@ semaphore = {
 ' ': (0, 0), 'V': (0, 1), 'W': (0, 2), 'X': (0, 3), 'Y': (0, 4)}
 
 #calibration of the 8 servos and their positions (from lowest position upwards)
-#renaming from calib_## to fig#_L/R to make understanding code easier
-fig1_L = [250, 188, 115, 63, 0] #fig 1 left arm (servo 1)
-fig1_R = [0, 63, 113, 188, 250] #fig 1 right arm (servo 2)
-fig2_L = [250, 170, 100, 55, 0] #fig 2 left arm
-fig2_R = [0, 63, 120, 188, 250] #fig 2 right arm
-fig3_L = [250, 180, 115, 60, 0] #fig 3 left arm
-fig3_R = [0, 50, 105, 180, 250] #fig 3 right arm
-fig4_L = [250, 188, 115, 52, 0] #fig 4 left arm
-fig4_R = [0, 55, 110, 188, 250] #fig 4 right arm
+# for AWATER
+fig1_L = [250, 170, 107, 50, 0] #fig 1 left arm (servo 1)
+fig1_R = [0, 50, 115, 188, 250] #fig 1 right arm (servo 2)
+fig2_L = [250, 195, 127, 60, 0] #fig 2 left arm (servo 7)
+fig2_R = [0, 55, 120, 180, 250] #fig 2 right arm (servo 8)
+fig3_L = [230, 175, 112, 50, 0] #fig 3 left arm (servo 11)
+fig3_R = [0, 50, 120, 180, 230] #fig 3 right arm (servo 12)
+fig4_L = [250, 187, 125, 60, 10] #fig 4 left arm (servo 15)
+fig4_R = [0, 57, 118, 180, 250] #fig 4 right arm (servo 16)
 
 
 # lets make a list of lists of the 8 servos... 
@@ -107,7 +105,8 @@ def test():
     for p in s[1]:
       #print('servo.move(',s[0],',',p,')')
       servo.move(s[0],p)
-      time.sleep(0.4)
+      #time.sleep(0.4)
+      #time.sleep(3) #for testing
   center()
 
 
