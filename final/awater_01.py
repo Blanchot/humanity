@@ -24,10 +24,10 @@ except ImportError:
 
 # SETUP
 servo = Servo(0x40)
-servo.set_low_limit(1.0)
-#servo.set_low_limit(0.6) #was 1.0
-servo.set_high_limit(2.0)
-#servo.set_high_limit(2.4) #was 2.0
+#servo.set_low_limit(1.0)
+servo.set_low_limit(0.6) #was 1.0
+#servo.set_high_limit(2.0)
+servo.set_high_limit(2.4) #was 2.0
 servo.output_enable()
 
 semaphore = {
