@@ -2,12 +2,16 @@
 # USAGE: (sudo) python3 -i awater_01.py
 # using ABElectronics Servo Pi pwm controller
 # based on ABElectronics PWM servo controller demo
-# 25.02.2020 ready to calibrate the servos for the large work
-# 04.03.2020 initial calibration of servos
- 
+# 04.03.2020 initial calibration of servos and verb list
 from __future__ import absolute_import, division, print_function, \
                                                     unicode_literals
-import time
+
+
+import time, random
+import sys # to import verb list(s)
+sys.path.append("..") #stored in 'humanity directory' (so I can access these with from the test directory)
+import verbs
+
 
 try:
     from ServoPi import Servo
