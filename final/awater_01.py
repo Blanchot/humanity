@@ -106,7 +106,7 @@ def test():
       #print('servo.move(',s[0],',',p,')')
       servo.move(s[0],p)
       #time.sleep(0.4)
-      #time.sleep(3) #for testing
+      time.sleep(3) #for testing
   center()
 
 
