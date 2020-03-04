@@ -1,8 +1,8 @@
-#Here is my MASTER list of 4 letter verbs for Humanity_I
+#Here are my lists of 4 letter verbs for Humanity_I
 #Note verbs do not include the letters Q or Z
-#From here: https://www.wordhippo.com/what-is/word-finder-unscrambler.html
+#Verbs from here: https://www.wordhippo.com/what-is/word-finder-unscrambler.html
 
-verbs4 = ['abet','abut','ache','ahoy','ajar,','ally','amen','ante','arse','aver','avow',
+master= ['abet','abut','ache','ahoy','ajar,','ally','amen','ante','arse','aver','avow',
 'baby','back','bail','bait','bake','bald','bale','balk','ball','balm','band','bane','bang','bank',
 'barb','bard','bare','barf','bark','barn','bash','bask','bate','bath','bawd','bawl','beam','bean',
 'bear','beat','beck','beep','bego','bell','belt','bend','best','bias','bide','biff','bile','bill',
