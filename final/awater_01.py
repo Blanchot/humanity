@@ -3,7 +3,7 @@
 # using ABElectronics Servo Pi pwm controller
 # based on ABElectronics PWM servo controller demo
 # 25.02.2020 ready to calibrate the servos for the large work
-
+# 04.03.2020 testing set low and high limits to default
  
 from __future__ import absolute_import, division, print_function, \
                                                     unicode_literals
@@ -24,8 +24,10 @@ except ImportError:
 
 # SETUP
 servo = Servo(0x40)
-servo.set_low_limit(0.6) #was 1.0 
-servo.set_high_limit(2.4) #was 2.0
+servo.set_low_limit(1.0)
+#servo.set_low_limit(0.6) #was 1.0
+servo.set_high_limit(2.0)
+#servo.set_high_limit(2.4) #was 2.0
 servo.output_enable()
 
 semaphore = {
