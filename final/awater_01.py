@@ -146,10 +146,10 @@ def entry():
 
 
 def run(intSecs):
-  interval= intSecs
+  #interval= intSecs
   vier= random.choice(verbs).upper()
   print('Humanity i',vier,'you.')
   display(vier)
-  time.sleep(interval)
-  run(interval)
+  time.sleep(intSecs)
+  run(intSecs)
 
