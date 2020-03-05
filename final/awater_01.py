@@ -119,11 +119,11 @@ def display(vier):
   for letter in vier:
     print(semaphore[letter]) #TESTING: prints the tuple for each letter
     posList.extend(semaphore[letter]) #appends each element of the tuple to posList (Oh joy!)
-  print(posList) #TESTING: prints the list of positions
+  #print(posList) #TESTING: prints the list of positions
   center()
   time.sleep(2)
   for i in range(0,8):
-    print('Servo #:', servoList[i][0], 'Pos #:', servoList[i][1][posList[i]])
+    #print('Servo #:', servoList[i][0], 'Pos #:', servoList[i][1][posList[i]])
     servo.move(servoList[i][0], servoList[i][1][posList[i]])
     time.sleep(0.4)
 
@@ -145,12 +145,9 @@ def entry():
       print('Some letters unavailable!')
 
 
+def run():
+  vier= random.choice(verbs).upper()
+  print('Humanity i',vier,'you.')
+  display(vier)
 
-'''
-Note: all indications of left/right are from my frontal view
-Note: numeric arm ranges are from up to down
-Figure 1 (top left): left_arm: s6 (0-250), right_arm s5 (250-0)
-Figure 2 (top right): left_arm: s2 (0-250), right_arm s1 (250-0)
-Figure 3 (bot left): left_arm: s10 (0-250), right_arm s9 (250-0)
-Figure 4 (bot right): left_arm: s4 (0-250), right_arm s3 (250-0)
-'''
+
