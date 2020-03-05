@@ -145,10 +145,11 @@ def entry():
       print('Some letters unavailable!')
 
 
-def run():
+def run(intSecs):
+  interval= intSecs
   vier= random.choice(verbs).upper()
   print('Humanity i',vier,'you.')
   display(vier)
-  time.sleep(30)
-  run()
+  time.sleep(interval)
+  run(interval)
 
