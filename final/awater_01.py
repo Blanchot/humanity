@@ -146,9 +146,10 @@ def entry():
 
 
 def run(intSecs):
-  #interval= intSecs
+  t= time.localtime()
+  currt= time.strftime("%H:%M:%S",t)
   vier= random.choice(verbs).upper()
-  print('Humanity i',vier,'you.')
+  print(currt,'Humanity i',vier,'you.')
   display(vier)
   time.sleep(intSecs)
   run(intSecs)
