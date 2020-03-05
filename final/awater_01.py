@@ -10,7 +10,7 @@ from __future__ import absolute_import, division, print_function, \
 import time, random
 import sys # to import verb list(s)
 sys.path.append("..") #stored in 'humanity directory' (so I can access these with from the test directory)
-import shortestList
+from shortestList import verbs
 
 
 try:
