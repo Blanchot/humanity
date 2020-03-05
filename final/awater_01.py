@@ -114,7 +114,13 @@ def test():
   center()
 
 
+# SERVO MOVEMENT
 def display(vier):
+  '''
+  Function to move the servo motors and display text argument (vier)
+  '''
+  servo.wake() #wakes up PWM controller
+  
   posList= [] #create an empty list of positions
   for letter in vier:
     #print(semaphore[letter]) #TESTING: prints the tuple for each letter
@@ -126,6 +132,8 @@ def display(vier):
     #print('Servo #:', servoList[i][0], 'Pos #:', servoList[i][1][posList[i]]) #TESTING
     servo.move(servoList[i][0], servoList[i][1][posList[i]])
     time.sleep(0.4)
+  
+  servo.sleep() #puts the PWM controller aslepp
 
 
 # MANUAL INPUT
@@ -145,6 +153,7 @@ def entry():
       print('Some letters unavailable!')
 
 
+# RUN RANDOMLY
 def run(intSecs):
   t= time.localtime()
   currt= time.strftime("%H:%M:%S",t)
@@ -153,4 +162,5 @@ def run(intSecs):
   display(vier)
   time.sleep(intSecs)
   run(intSecs)
+
 
