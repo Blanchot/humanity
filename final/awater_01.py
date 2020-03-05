@@ -149,6 +149,6 @@ def run():
   vier= random.choice(verbs).upper()
   print('Humanity i',vier,'you.')
   display(vier)
-  time.sleep(60)
-
+  time.sleep(30)
+  run()
 
