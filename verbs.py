@@ -1,4 +1,4 @@
-#Here are my lists of 4 letter verbs for Humanity_I
+#Here is my master list of 4 letter verbs for Humanity_I
 #Note verbs do not include the letters Q or Z
 #Verbs from here: https://www.wordhippo.com/what-is/word-finder-unscrambler.html
 
