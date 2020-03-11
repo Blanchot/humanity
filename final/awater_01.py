@@ -71,6 +71,7 @@ servoList = [
 
 
 def center(): #center servos
+    servo.wake()
     servo.move(1, fig1_L[2])
     servo.move(2, fig1_R[2])
     servo.move(7, fig2_L[2])
@@ -79,9 +80,11 @@ def center(): #center servos
     servo.move(12, fig3_R[2])
     servo.move(15, fig4_L[2])
     servo.move(16, fig4_R[2])
+    servo.sleep()
 
 
 def down():
+  servo.wake()
   servo.move(1, fig1_L[0])
   servo.move(2, fig1_R[0])
   servo.move(7, fig2_L[0])
@@ -90,9 +93,11 @@ def down():
   servo.move(12, fig3_R[0])
   servo.move(15, fig4_L[0])
   servo.move(16, fig4_R[0])
+  servo.sleep()
 
 
 def up():
+  servo.wake()
   servo.move(1, fig1_L[4])
   servo.move(2, fig1_R[4])
   servo.move(7, fig2_L[4])
@@ -101,9 +106,11 @@ def up():
   servo.move(12, fig3_R[4])
   servo.move(15, fig4_L[4])
   servo.move(16, fig4_R[4])
+  servo.sleep()
 
 
 def test():
+  servo.wake()
   for s in servoList:
     #print('s[0]: ',s[0])
     for p in s[1]:
@@ -112,6 +119,7 @@ def test():
       time.sleep(0.4)
       #time.sleep(3) #for testing
   center()
+  servo.sleep()
 
 
 # SERVO MOVEMENT
