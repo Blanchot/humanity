@@ -80,6 +80,7 @@ def center(): #center servos
     servo.move(12, fig3_R[2])
     servo.move(15, fig4_L[2])
     servo.move(16, fig4_R[2])
+    time.sleep(2) #finish servo movement before sleep
     servo.sleep()
 
 
@@ -93,6 +94,7 @@ def down():
   servo.move(12, fig3_R[0])
   servo.move(15, fig4_L[0])
   servo.move(16, fig4_R[0])
+  time.sleep(2) #finish servo movement before sleep
   servo.sleep()
 
 
@@ -106,6 +108,7 @@ def up():
   servo.move(12, fig3_R[4])
   servo.move(15, fig4_L[4])
   servo.move(16, fig4_R[4])
+  time.sleep(2) #finish servo movement before sleep
   servo.sleep()
 
 
