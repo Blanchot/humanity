@@ -119,7 +119,6 @@ def test():
       time.sleep(0.4)
       #time.sleep(3) #for testing
   center()
-  servo.sleep()
 
 
 # SERVO MOVEMENT
